@@ -1,6 +1,7 @@
-const DataPoint = require('data-point')
-const dataPoint = DataPoint.create()
-const assert = require('assert')
+const DataPoint = require('data-point');
+const assert = require('assert');
+
+const dataPoint = DataPoint.create();
 
 const input = {
     a: {
@@ -20,6 +21,7 @@ dataPoint.addEntities({
 dataPoint
     .resolve('hash:helloWorld', input)
     .then((output) => {
+        console.log('output:', output);
         assert.deepEqual(output, {
             c: 'Hello',
             d: ' World!!'

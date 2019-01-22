@@ -1,7 +1,12 @@
-const DataPoint = require('data-point')
-const dataPoint = DataPoint.create()
-const assert = require('assert')
-const _ = require('lodash')
+const DataPoint = require('data-point');
+const assert = require('assert');
+const _ = require('lodash');
+
+const dataPoint = DataPoint.create();
+
+const input = {
+    name: 'DataPoint'
+}
 
 dataPoint.addEntities({
     'hash:mapKeys': {
@@ -22,13 +27,14 @@ dataPoint.addEntities({
     }
 })
 
-const input = {
-    name: 'DataPoint'
-}
 
-dataPoint.resolve('hash:mapKeys', input).then(output => {
-    assert.deepEqual(output, {
-        name: 'DataPoint',
-        url: 'https://github.com/ViacomInc/data-point'
+
+dataPoint
+    .resolve('hash:mapKeys', input)
+    .then(output => {
+        console.log('output:', output);
+        assert.deepEqual(output, {
+            name: 'DataPoint',
+            url: 'https://github.com/ViacomInc/data-point'
+        })
     })
-})

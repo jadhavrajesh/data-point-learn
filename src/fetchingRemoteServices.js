@@ -1,12 +1,15 @@
 const DataPoint = require('data-point')
+const Schema = DataPoint.entityFactories.Schema;
+const Request = DataPoint.entityFactories.Request;
+const Model = DataPoint.entityFactories.Model;
 
 // create DataPoint instance
 const dataPoint = DataPoint.create()
 
 const {
-  Request,
-  Model,
-  Schema,
+  // Request,
+  // Model,
+  // Schema,
   map
 } = DataPoint
 

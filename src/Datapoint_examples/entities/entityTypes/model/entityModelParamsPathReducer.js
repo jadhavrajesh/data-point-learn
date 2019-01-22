@@ -9,7 +9,7 @@ const multiplyValue = (input, acc) => {
 }
 
 dataPoint.addEntities({
-    'model:multiply': {
+    'entry:multiply': {
         value: multiplyValue,
         params: {
             multiplier: 100
@@ -18,7 +18,7 @@ dataPoint.addEntities({
 })
 
 dataPoint
-    .resolve('model:multiply', 200)
+    .resolve('model:multiply')
     .then((output) => {
         console.log('output:', output);
         // assert.deepEqual(output, 20000)

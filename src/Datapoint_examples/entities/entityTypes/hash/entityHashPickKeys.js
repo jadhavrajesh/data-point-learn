@@ -1,6 +1,12 @@
-const DataPoint = require('data-point')
-const dataPoint = DataPoint.create()
-const assert = require('assert')
+const DataPoint = require('data-point');
+const assert = require('assert');
+
+const dataPoint = DataPoint.create();
+
+const input = {
+    name: 'DataPoint',
+    url: 'https://github.com/ViacomInc/data-point'
+}
 
 dataPoint.addEntities({
     'hash:pickKeys': {
@@ -8,16 +14,13 @@ dataPoint.addEntities({
     }
 })
 
-const input = {
-    name: 'DataPoint',
-    url: 'https://github.com/ViacomInc/data-point'
-}
-
-dataPoint.resolve('hash:pickKeys', input).then(output => {
-    // notice how name is no longer 
-    // in the object
-    console.log(output);
-    assert.deepEqual(output, {
-        name: 'DataPoint',
+dataPoint
+    .resolve('hash:pickKeys', input)
+    .then(output => {
+        // notice how url is no longer 
+        // in the object
+        console.log(output);
+        assert.deepEqual(output, {
+            name: 'DataPoint',
+        })
     })
-})
