@@ -1,0 +1,17 @@
+{
+  "name": "data-point-learn",
+  "version": "1.0.0",
+  "description": "data-point examples for learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "data-point-learn"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "data-point": "^3.4.0"
+  }
+}
