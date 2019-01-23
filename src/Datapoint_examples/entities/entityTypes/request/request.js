@@ -3,22 +3,22 @@ const DataPoint = require('data-point');
 const dp = DataPoint.create();
 
 const Model = DataPoint.entityFactories.Model;
-const Request = DataPoint.entityFactories.Request;
+// const Request = DataPoint.entityFactories.Request;
 const map = DataPoint.helpers.map;
 
-// dp.addEntities({
-//     'request:PlanetRequest': {
-//         url: 'https://swapi.co/api/planets/1/'
-//     }
+dp.addEntities({
+    'request:PlanetRequest': {
+        url: 'https://swapi.co/api/planets/1/'
+    }
+});
+
+// const PlanetRequest = Request('PlanetRequest', {
+//     url: 'https://swapi.co/api/planets/1/'
 // });
 
-const PlanetRequest = Request('PlanetRequest', {
-    url: 'https://swapi.co/api/planets/1/'
-});
-
-const PersonRequest = Request('PersonRequest', {
-	url: '{value}'
-});
+// const PersonRequest = Request('PersonRequest', {
+// 	url: '{value}'
+// });
 
 const Planet = Model('Planet', {
     value: [

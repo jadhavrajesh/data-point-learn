@@ -1,4 +1,5 @@
 const DataPoint = require('data-point');
+const constant = DataPoint.helpers.constant;
 
 const dataPoint = DataPoint.create();
 
@@ -9,7 +10,7 @@ const input = {
 
 const reducer = {
     a: '$a',
-    b: DataPoint.constant({
+    b: constant({
         a: '$a',
         b: 5
     })
@@ -18,5 +19,5 @@ const reducer = {
 dataPoint
     .resolve(reducer, input)
     .then(output => {
-        console.log(output);
+        console.log('output:',output);
     });

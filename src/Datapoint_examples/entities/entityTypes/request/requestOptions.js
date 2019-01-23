@@ -1,4 +1,5 @@
 const DataPoint = require('data-point');
+const constant = DataPoint.helpers.constant;
 const dataPoint = DataPoint.create();
 
 const input = {
@@ -6,11 +7,13 @@ const input = {
 }
 
 dataPoint.addEntities({
-    url: 'https://swapi.co/api/people',
-    options: {
-        'content-type': DataPoint.constant('application/json'),
-        'request:searchPeople:': {
-            qs: '$searchTerm'
+    'request:searchPeople': {
+        url: 'https://swapi.co/api/people',
+        options: {
+            'content-type': constant('application/json'),
+            qs: {
+                search: '$searchTerm'
+            }
         }
     }
 });

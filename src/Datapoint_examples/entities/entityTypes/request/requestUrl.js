@@ -6,8 +6,8 @@ const dataPoint = DataPoint.create();
 // add entities to dataPoint
 dataPoint.addEntities({
     'request:getLuke': {
-        // url: 'https://swapi.co/api/people/1/'
-        url: 'https://jsonplaceholder.typicode.com/users/1'
+        url: 'https://swapi.co/api/people/1/'
+        // url: 'https://jsonplaceholder.typicode.com/users/1'
     }
 })
 
