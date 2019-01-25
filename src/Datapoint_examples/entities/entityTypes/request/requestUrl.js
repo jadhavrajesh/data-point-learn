@@ -1,6 +1,6 @@
 const DataPoint = require('data-point');
 
-// creaet instance
+// create instance
 const dataPoint = DataPoint.create();
 
 // add entities to dataPoint
@@ -10,7 +10,6 @@ dataPoint.addEntities({
         // url: 'https://jsonplaceholder.typicode.com/users/1'
     }
 })
-
 
 dataPoint
     .resolve('request:getLuke', {})
