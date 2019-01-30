@@ -6,10 +6,11 @@ const input = 200;
 
 dataPoint.addEntities({
     'model:getParam': {
-        value: '$..params.multiplier',
+        value: '$..params',
         params: {
             multiplier: 100
         }
+        
     }
 });
 

@@ -11,12 +11,6 @@ dataPoint.addEntities({
             }
         }),
     },
-    'collection:getRepoUrl': {
-        map: '$url',
-        filter: (input) => {
-            console.log('input:', input);
-        }
-    },
     'request:getPeoples': {
         url: 'https://swapi.co/api/people/',
         options: () => ({
@@ -26,11 +20,19 @@ dataPoint.addEntities({
         })
     },
     'collection:getHeightGThan150': {
-        map: '$url',
-        filter: (input) => {
-            console.log('input:', input);
-        }
+        compose: [
+            {
+                map: '$url',
+            },
+            {
+                filter: (input) => {
+                    console.log('input:', input);
+                    return input.stargazers_count > 500
+                }
+            }
+        ]
     }
+
 })
 
 dataPoint

@@ -2,12 +2,6 @@ const DataPoint = require('data-point');
 
 const dataPoint = DataPoint.create();
 
-// dataPoint.addEntities({
-//     'request:GetRepo': {
-//         'url': 'https://swapi.co/api/people/1/'
-//     }
-// });
-
 const options = {
     trace: true // <-- set to true to enable tracing, a file will be created
 }
