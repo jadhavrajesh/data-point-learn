@@ -1,0 +1,176 @@
+{
+  "id": "1",
+  "reducer": {
+    "type": "ReducerList",
+    "reducers": [
+      {
+        "type": "ReducerEntityId",
+        "name": "PlanetRequest",
+        "entityType": "request",
+        "asCollection": false,
+        "hasEmptyConditional": false,
+        "id": "request:PlanetRequest"
+      },
+      {
+        "type": "ReducerObject",
+        "reducers": [
+          {
+            "path": [
+              "model:PersonModel",
+              "value",
+              "name"
+            ],
+            "reducer": {
+              "type": "ReducerPath",
+              "name": "name",
+              "asCollection": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hrtime": [
+    29582,
+    770009622
+  ],
+  "timeStartNs": 29582770009622,
+  "durationNs": 573987172,
+  "durationMs": 573.987172,
+  "timelineStartNs": 0,
+  "timelineStartMs": 0,
+  "nestingLevel": 0,
+  "label": "ReducerList:1",
+  "reducerSummary": {
+    "id": "",
+    "type": "ReducerList",
+    "name": "",
+    "body": ""
+  },
+  "children": [
+    {
+      "id": "2",
+      "reducer": {
+        "type": "ReducerEntityId",
+        "name": "PlanetRequest",
+        "entityType": "request",
+        "asCollection": false,
+        "hasEmptyConditional": false,
+        "id": "request:PlanetRequest"
+      },
+      "hrtime": [
+        29582,
+        770946634
+      ],
+      "timeStartNs": 29582770946634,
+      "parent": "[Circular ~]",
+      "durationNs": 565957630,
+      "durationMs": 565.95763,
+      "timelineStartNs": 937012,
+      "timelineStartMs": 0.937012,
+      "nestingLevel": 1,
+      "label": "request:PlanetRequest:2",
+      "reducerSummary": {
+        "id": "request:PlanetRequest",
+        "type": "ReducerEntityId",
+        "name": "PlanetRequest",
+        "body": ""
+      },
+      "children": [
+        {
+          "id": "3",
+          "reducer": {
+            "type": "ReducerFunction"
+          },
+          "hrtime": [
+            29582,
+            771913647
+          ],
+          "timeStartNs": 29582771913647,
+          "parent": "[Circular ~.children.0]",
+          "durationNs": 362736,
+          "durationMs": 0.362736,
+          "timelineStartNs": 1904025,
+          "timelineStartMs": 1.904025,
+          "nestingLevel": 2,
+          "label": "ReducerFunction:3",
+          "reducerSummary": {
+            "id": "",
+            "type": "ReducerFunction",
+            "name": "defaultOptions",
+            "body": "function defaultOptions () {\n  return {}\n}"
+          },
+          "children": []
+        },
+        {
+          "id": "4",
+          "reducer": {
+            "type": "ReducerObject",
+            "reducers": [
+              {
+                "path": [
+                  "model:PersonModel",
+                  "value",
+                  "name"
+                ],
+                "reducer": {
+                  "type": "ReducerPath",
+                  "name": "name",
+                  "asCollection": false
+                }
+              }
+            ]
+          },
+          "hrtime": [
+            29583,
+            337181949
+          ],
+          "timeStartNs": 29583337181949,
+          "parent": "[Circular ~.children.0]",
+          "durationNs": 6559719,
+          "durationMs": 6.559719,
+          "timelineStartNs": 567172327,
+          "timelineStartMs": 567.172327,
+          "nestingLevel": 2,
+          "label": "ReducerObject:4",
+          "reducerSummary": {
+            "id": "",
+            "type": "ReducerObject",
+            "name": "",
+            "body": ""
+          },
+          "children": [
+            {
+              "id": "5",
+              "reducer": {
+                "type": "ReducerPath",
+                "name": "name",
+                "asCollection": false
+              },
+              "hrtime": [
+                29583,
+                339054471
+              ],
+              "timeStartNs": 29583339054471,
+              "parent": "[Circular ~.children.0.children.1]",
+              "durationNs": 919545,
+              "durationMs": 0.919545,
+              "timelineStartNs": 569044849,
+              "timelineStartMs": 569.044849,
+              "nestingLevel": 3,
+              "label": "ReducerPath:5",
+              "reducerSummary": {
+                "id": "",
+                "type": "ReducerPath",
+                "name": "name",
+                "body": ""
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "maxNestingLevel": 4
+}

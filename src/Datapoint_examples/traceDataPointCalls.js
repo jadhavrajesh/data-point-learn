@@ -1,29 +1,29 @@
-const DataPoint = require('data-point');
+const DataPoint = require("data-point");
 
 const dataPoint = DataPoint.create();
+const { Model, Request } = DataPoint.entityFactories;
 
 const options = {
     trace: true // <-- set to true to enable tracing, a file will be created
-}
+};
 
-const Model = DataPoint.entityFactories.Model;
-const Request = DataPoint.entityFactories.Request;
+// const PersonRequest = Request('PersonRequest', {
+//     url: 'https://jsonplaceholder.typicode.com/users/1'
+// });
 
-const PersonRequest = Request('PersonRequest', {
-    url: 'https://swapi.co/api/people/1/'
-})
+dataPoint.addEntities({
+    'request:PlanetRequest': {
+        url: 'https://jsonplaceholder.typicode.com/users/1'
+    }
+});
 
 const PersonModel = Model('PersonModel', {
-    value: {
-        name: '$name',
-        birthYear: '$birth_year'
-    }
-})
+    value: { name: '$name' },
+});
 
 dataPoint
-    .transform([PersonRequest, PersonModel], 1, options)
-    // .transform('request:GetRepo', 1, options)
-    // .resolve('request:GetRepo', {}, {})
+    // .resolve(PersonRequest, {})
+    .transform(['request:PlanetRequest', PersonModel], 1, options)
     .then(output => {
-        console.log('output:', output);
-    })
+        console.log("output:", output);
+    });

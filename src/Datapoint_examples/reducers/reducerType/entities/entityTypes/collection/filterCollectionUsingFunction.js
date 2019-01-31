@@ -35,8 +35,7 @@ dataPoint.addEntities({
 
 })
 
-dataPoint
-    // .resolve(['request:getPeoples'], ['request:getHeightGThan150'], {})
+dataPoint    
     .resolve(['request:getOrgRepos'], ['collection:getRepoUrl'], {})
     .then(output => {
         console.log('output:', output);
