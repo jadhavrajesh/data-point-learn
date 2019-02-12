@@ -1,18 +1,20 @@
 const DataPoint = require('data-point');
-
 const dataPoint = DataPoint.create();
 
 const map = DataPoint.helpers.map;
 
-const input = [{
-    a: 1
-}, {
-    a: 2
-}]
+const input = [
+    {
+        a: 1,
+        b: 2
+    }, {
+        a: 2,
+        b: 2
+    }
+]
 
-// get path `a` then multiply by 2
 const reducer = map(
-    ['$a', (input) => input * 2]
+    ['$', (input) => input.b * 2]
 )
 
 dataPoint
